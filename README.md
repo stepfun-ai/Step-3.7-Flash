@@ -1,5 +1,11 @@
 # Step 3.7 Flash
 
+- **[ModelPage]**: https://static.stepfun.com/blog/step-3.7-flash/
+- **[HuggingFace]**:
+    - BF16: https://huggingface.co/stepfun-ai/Step-3.7-Flash/
+    - FP8: https://huggingface.co/stepfun-ai/Step-3.7-Flash-FP8
+    - NVFP4: https://huggingface.co/stepfun-ai/Step-3.7-Flash-NVFP4
+    - GGUF: https://huggingface.co/stepfun-ai/Step-3.7-Flash-GGUF
 
 ## 1. Introduction
 
