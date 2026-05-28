@@ -32,7 +32,7 @@ Step 3.7 Flash is built for live engineering tasks and secured a definitive seco
 | Output | $1.15 / M tokens |
 
 ## 4. Availability, Deployment, and Ecosystem
-- Availability: Step 3.7 Flash is available through StepFun Open Platform — [platform.stepfun.ai](https://platform.stepfun.ai) (Global) and [platform.stepfun.com](https://platform.stepfun.com) (China) — as well as partner platforms including OpenRouter and NVIDIA NIM. StepFun is also partnering with DeepInfra, Fireworks AI, and Modal Labs to expand availability soon.
+- Availability: Step 3.7 Flash is available on the StepFun Open Platform — [platform.stepfun.ai](https://platform.stepfun.ai) (Global) and [platform.stepfun.com](https://platform.stepfun.com) (China), OpenRouter, and NVIDIA NIM. StepFun is also partnering with DeepInfra, Fireworks AI, and Modal to expand availability soon.
 - Deployment: Step 3.7 Flash supports flexible deployment across cloud, data center, and local environments. For large-scale production and enterprise use cases, Step 3.7 Flash can be deployed on modern data center infrastructure. For local and workstation scenarios, it can also run on high-memory devices such as NVIDIA DGX Station, AMD Ryzen AI Max+ 395-based systems, and Mac Studio / Macbook Pro devices with at least 128GB unified memory.
 - Ecosystem: Step 3.7 Flash is supported across popular open-source infrastructure for both inference and model development. For inference and serving, developers can use vLLM, SGLang, Hugging Face Transformers, and llama.cpp. For model development workflows, StepFun model support has landed in the NVIDIA Megatron ecosystem, including Megatron Core and Megatron Bridge.
 
@@ -40,14 +40,12 @@ Step 3.7 Flash is built for live engineering tasks and secured a definitive seco
 
 You can get started with Step 3.7 Flash in minutes using StepFun's API or via other inference providers.
 
-> **Note — pick the right `base_url` for your region.** StepFun operates two regional platforms with separate API hosts. The `base_url` you pass to the OpenAI client **must** match the platform where your API key was issued, otherwise requests will be rejected as unauthorized.
+> Pick the right `base_url` for your region. StepFun operates two regional platforms with separate API hosts. The `base_url` you pass to the OpenAI client must match the platform where your API key was issued, otherwise requests will be rejected as unauthorized.
 >
-> | Platform | Console | `base_url` |
-> |---|---|---|
-> | Global | [platform.stepfun.ai](https://platform.stepfun.ai) | `https://api.stepfun.ai/v1` |
-> | China  | [platform.stepfun.com](https://platform.stepfun.com) | `https://api.stepfun.com/v1` |
+> - **Global**: [platform.stepfun.ai](https://platform.stepfun.ai) — `base_url=https://api.stepfun.ai/v1`
+> - **China**: [platform.stepfun.com](https://platform.stepfun.com) — `base_url=https://api.stepfun.com/v1`
 >
-> To avoid hard-coding the wrong region, the examples below read both values from environment variables. Export them once before running:
+> To avoid hard-coding the wrong region, the examples below read both the API key and base URL from environment variables. Export them once before running:
 >
 > ```bash
 > export STEP_API_KEY="sk-..."
@@ -289,7 +287,7 @@ inputs = processor.apply_chat_template(
 
 # 3. Generate
 generated_ids = model.generate(**inputs, max_new_tokens=128, do_sample=False)
-output_text = processor.tokenizer.decode(generated_ids[0][inputs.input_ids.shape[1]:], skip_special_tokens=True)
+output_text = processor.decode(generated_ids[0][inputs.input_ids.shape[1]:], skip_special_tokens=True)
 
 print(output_text)
 ```
