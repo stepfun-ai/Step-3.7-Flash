@@ -1,4 +1,13 @@
-# Step 3.7 Flash
+<div align="center">
+  <h1 style="margin: 0; border-bottom: none;"> <img src="assets/stepfun-1.png" width="25" style="margin-right: 10px;"/>  Step 3.7 Flash</h1>
+</div>
+
+<p align="center">
+    <a href="https://huggingface.co/stepfun-ai/Step-3.7-Flash/"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20HF-StepFun/STEP3p7-preview"></a>
+    <a href="https://discord.gg/RcMJhNVAQc"><img alt="Discord" src="https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white"></a>
+    <a href="https://static.stepfun.com/blog/step-3.7-flash/"><img alt="Webpage" src="https://img.shields.io/badge/Webpage-Blog-blue"></a>
+    <a href="https://www.apache.org/licenses/LICENSE-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-green"></a>
+</p>
 
 - **[ModelPage]**: https://static.stepfun.com/blog/step-3.7-flash/
 - **[HuggingFace]**:
